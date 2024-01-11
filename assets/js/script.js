@@ -12,6 +12,9 @@ keys.forEach((btn)=>{
     btn.addEventListener('click',()=>{
         textarea.value+=btn.innerText;
         chars =textarea.value.split("");
+        const typedChar = btn.key;
+        document.getElementById('output').innerText = `Typed character: ${chars}`;
+        console.log(`Typed character: ${chars}`);
 });
 });
 //delete button event
@@ -31,6 +34,13 @@ shiftBtn.addEventListener("click",()=>{
    
     });
 });
+function printTypedCharacter(event) {
+    const typedChar = event.key;
+    document.getElementById('output').innerText = `Typed character: ${typedChar}`;
+    
+    console.log(`Typed character: ${typedChar}`);
+  }
+
 // Change Theme
 function setTheme(theme) {
     document.documentElement.style.setProperty("--primary-color", theme);

@@ -18,7 +18,7 @@
  <link rel="stylesheet" href="assets/css/keyboard.css">
 </head>
 <body>
-    <header>
+    <header> 
         <div class="git">
             <h1> VIRTUAL KEYBOARD</h1>
             <a href="https://github.com/pratyusha-brs/virtual-keyboard.git"><button class="btn"> Git-Repo</button></a>
@@ -27,9 +27,13 @@
     <main role="main" class="container" pt-5 pb-5>
         <section>
             <div class="container">
-                <div class="textarea">
+                <div class="textarea" onkeyup="printTypedCharacter(event)">
+   
                     <textarea placeholder="enter some text"></textarea>
+                    
                 </div>
+                <div id="output"></div>
+              
                 <div class="keyboard">
                     <div class="row"> 
                         <button class="keys btn">1</button>
@@ -118,6 +122,7 @@
           </div>
         </div>
       </footer>
+    
       <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
