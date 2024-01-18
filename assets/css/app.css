@@ -74,7 +74,9 @@ p {
     font-size: 14px;
     padding: 0 10px;
 }
-
+.git{
+    text-align: center;
+}
 select:focus,
 input:focus,
 button:focus {
